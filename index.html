@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" href="https://production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+  <link rel="mask-icon" type="" href="https://production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+  <title> Dz - Short</title>
+  
+  
+  
+  
+      <style>
+      
+
+
+
+
+
+
+@import url(http://fonts.googleapis.com/earlyaccess/thabit.css);
+@import url(http://fonts.googleapis.com/earlyaccess/amiri.css);
+
+
+
+
+
+
+
+
+/* Important styles */
+#toggle {
+  display: block;
+  width: 28px;
+  height: 30px;
+  margin: 30px auto 10px;
+}
+
+#toggle span:after,
+#toggle span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -9px;
+}
+#toggle span:after{
+  top: 9px;
+}
+#toggle span {
+  position: relative;
+  display: block;
+}
+
+#toggle span,
+#toggle span:after,
+#toggle span:before {
+  width: 100%;
+  height: 5px;
+  background-color: #888;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+
+/* on activation */
+#toggle.on span {
+  background-color: transparent;
+}
+#toggle.on span:before {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+#toggle.on span:after {
+  transform: rotate(-45deg) translate(7px, -8px);
+}
+#toggle.on + #menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* menu appearance*/
+#menu {
+  position: relative;
+  color: #999;
+  width: 200px;
+  padding: 10px;
+  margin: auto;
+  font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+  text-align: center;
+  border-radius: 4px;
+  background: white;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+  /* just for this demo */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .4s;
+}
+#menu:after {
+  position: absolute;
+  top: -15px;
+  left: 95px;
+  content: "";
+  display: block;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 20px solid white;
+}
+ul, li, li a {
+  list-style: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+li a {
+  padding: 5px;
+  color: #888;
+  text-decoration: none;
+  transition: all .2s;
+}
+li a:hover,
+li a:focus {
+  background: #1ABC9C;
+  color: #fff;
+}
+
+
+/* demo styles */
+body { margin-top: 3em; background: #eee; color: #555; font-family: "Open Sans", "Segoe UI", Helvetica, Arial, sans-serif; }
+p, p a { font-size: 12px;text-align: center; color: #888; }
+
+
+
+
+body {
+	width: 100%;
+	background-color: #C0C0C0;
+	font-family: amiri;
+	
+}
+.container {
+  font-family: thabit;
+  font-size: 19px;
+  color: #fff;
+	width: 80%;
+margin-left: auto;
+text-align: center;
+	margin-right: auto;	
+}
+
+input[type="url"] {
+  display: block;
+  margin: 0;
+  width: 100%;
+  font-family: FS_Alex;
+  font-size: 40px;
+  appearance: none;
+}
+input[type="text"]:focus {
+  outline: none;
+}
+
+button {
+	argin-left: auto;
+	margin-right: auto;	
+	width: 100%;
+	font-size: 20px;
+	padding: 17px;
+	margin-top: 22px;
+}
+
+
+input[type="url"] {
+  padding: 10px;
+  border: solid 5px #c9c9c9;
+  transition: border 0.3s;
+}
+input[type="url"]:focus{
+  border: solid 5px #969696;
+}
+
+button {
+  color: #fff;
+  font-family: 'Thabit', serif;
+  background-color: #6496c8;
+  text-shadow: -1px 1px #417cb8;
+  border: none;
+}
+    </style>
+
+  
+  
+  
+  
+</head>
+
+<body translate="no" >
+
+  <html>
+<head>
+	<title>DZ - Short</title>
+
+<script type="text/javascript">
+    var restricted_domains = ['app.appsgeyser.com','twitter.com','facebook.com','google.com','yahoo.com', ];
+    var user_id = 226818;
+</script>
+
+
+
+
+<script type="text/javascript" src="http://traidnt.net/api/arbah.js"></script>	
+</head>
+<body >
+  
+  
+  <a href="#menu" id="toggle"><span></span></a>
+
+<div id="menu">
+  <ul>
+    <li><a href="http://s.codepen.io/alidz/debug/vKOawg">Home</a></li>
+    <li><a href="http://s.codepen.io/alidz/debug/vKOawg">About</a></li>
+    <li><a href="http://www.foxyform.com/form.php?id=786300&sec_hash=bf2293aacbb">Contact</a></li>
+  </ul>
+</div>
+
+
+
+
+  
+  
+  
+  
+<div class="container">
+  
+  
+  
+<h1><span class="shake shake-delay">اختصرني</span></h1>
+  
+  
+  
+
+<h1>اضغط روابطك ..و شاركها الأحباب</h1>
+
+
+
+
+
+ <center>
+
+   
+   
+   
+</center>
+
+</br>
+
+
+
+
+
+
+
+  
+  
+  
+  
+<form id="url-form">
+<input id="addr" type="url" name="url-field" required/>
+<button onclick="shorten()">اضغط</button>
+</form>
+
+<br>
+
+<div id="shortened">
+<a onclick="javascript:red()" id="url-anchor" href=""></a>
+</div>
+
+</div>
+
+<script type="text/javascript">
+var RANGE = 999999;
+var locationRef = window.location;
+var StorageRef = window.localStorage;
+document.getElementById('url-form').onsubmit = function(event){
+event.preventDefault();
+};
+function redirectWithout() {
+	var raw_id =  locationRef.search.slice(locationRef.search.indexOf('=')+1);
+	locationRef.replace(StorageRef.getItem(raw_id));
+}
+// for urls with query parameters of already shortened urls
+if (locationRef.search !== "")
+{
+	redirectWithout();
+}
+else {
+ // for shortening the urls
+function shorten() {
+	var url = document.getElementById('addr').value;
+	var pat = /(\w+):\/\/[0-9A-Za-z]+\.\w+/g;
+	if(!pat.test(url) || url === ""){alert("Enter a valid url");return;}
+	var existing_id = null;
+	var shortId = Math.floor(Math.random()*RANGE);
+	for(var i=0;i<StorageRef.length;i++)
+			{if(url===StorageRef.getItem(StorageRef.key(i)))
+				{existing_id = StorageRef.key(i);
+				break;}
+			}
+			if(existing_id!==null){
+				createAnchor(existing_id);
+			}
+			else {
+				var new_shortId = Math.floor(Math.random()*RANGE);
+				StorageRef.setItem(new_shortId,url);
+				createAnchor(new_shortId);
+			}
+}
+function createAnchor(id){
+	var anchor = document.getElementById('url-anchor');
+	anchor.href = locationRef.origin+locationRef.pathname+'?u='+id;
+	anchor.text = 'مبرووك !!!رابطك المضغوط --جاهز --- انسخه و شاركه';	
+}
+document.getElementById('url-anchor').onclick = function red(event)
+{
+	event.preventDefault();
+	var u = document.getElementById('url-anchor');
+	var id_new = u.href.slice(u.href.indexOf('=')+1);
+	locationRef.replace(StorageRef.getItem(id_new));
+};
+}
+  
+  
+  
+  
+  
+  
+  
+  
+</script>
+  
+  
+  
+  
+  
+  
+  
+<link href='//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css' rel='stylesheet'/>
+
+
+
+<style>
+ @import url(http://fonts.googleapis.com/earlyaccess/thabit.css); 
+  
+#LinkList1 ul {
+list-style: outside none none;  
+  font-size: 25px;  
+margin: 0;
+padding: 0;
+}
+#LinkList1 li a {
+background-color: #F74047;
+box-shadow: 0 1px 0 4px #fff;
+color: #fff;
+display: block;
+height: 40px;
+line-height: 40px;
+margin-bottom: 5px;
+text-align: center;
+text-decoration: none;
+transition: all 0.7s ease 0s;
+font-family: Electrolize,ge_dinar_tworegular;
+font-weight: 100;
+}
+#LinkList1 li a:before {
+content: '\f122';
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+right: 0;
+float: right;
+color: #FFF;
+background: #456B8E;
+padding-left: 7px;
+padding-right: 7px;
+transition: all 0.3s linear;
+}
+#LinkList1 li a:after {
+content: '';
+margin-top: 10px;
+border: 10px solid transparent;
+border-right-color: #456B8E;
+float: right;
+}
+#LinkList1 li a:hover {
+background-color: #456B8E;
+}
+#LinkList1 li a:hover:before {
+padding-left: 17px;
+padding-right: 17px;
+transition: all 0.3s linear;
+content: '\f135';
+font-family: FontAwesome;
+background: #F74047;
+}
+#LinkList1 li a:hover:after {
+content: '';
+margin-top: 10px;
+border: 10px solid transparent;
+border-right-color: #F74047;
+float: right;
+}
+
+
+</style>
+
+
+<div class='widget LinkList' data-version='1' id='LinkList1'>
+  <center>
+<h2> ضع اعلانك ب 2000دج  للشهر - عرض خاص بالجزائر  </h2>
+  </center>
+<div class='widget-content'>
+<ul>
+<li><a href='http://kitaaby.xoo.it/index.php'> منتديات كتابي  </a></li>
+<li><a href='http://www.foxyform.com/form.php?id=786300&sec_hash=bf2293aacbb'>ضع موقعك هنا </a></li>
+<li><a href='http://www.foxyform.com/form.php?id=786300&sec_hash=bf2293aacbb'>ضع موقعك هنا </a></li>
+<li><a href='http://www.foxyform.com/form.php?id=786300&sec_hash=bf2293aacbb'>ضع موقعك هنا </a></li>
+<li><a href='http://www.foxyform.com/form.php?id=786300&sec_hash=bf2293aacbb'>ضع موقعك هنا </a></li>
+<li><a href='http://www.foxyform.com/form.php?id=786300&sec_hash=bf2293aacbb'>ضع موقعك هنا </a></li>
+<li><a href='http://www.foxyform.com/form.php?id=786300&sec_hash=bf2293aacbb'>ضع موقعك هنا </a></li>
+<li><a href='http://www.foxyform.com/form.php?id=786300&sec_hash=bf2293aacbb'>ضع موقعك هنا </a></li>
+<li><a href='http://www.foxyform.com/form.php?id=786300&sec_hash=bf2293aacbb'>ضع موقعك هنا </a></li>
+<li><a href='http://www.foxyform.com/form.php?id=786300&sec_hash=bf2293aacbb'>ضع موقعك هنا </a></li>
+</ul>
+<div class='clear'></div></div></div>
+
+
+  
+  
+  
+<style type="text/css">
+#w2b-StoTop {-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px; width:100px;background-color: #EEEEEE;background-color: rgba(238, 238, 238, 0.6);filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#99EEEEEE',EndColorStr='#99EEEEEE');text-align:center;padding:5px;position:fixed;bottom:10px;right:10px;cursor:pointer;color:#444;text-decoration:none;border:1px solid #C9C9C9;}
+</style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type='text/javascript'>
+    $(function() {
+        $.fn.scrollToTop = function() {
+            $(this).hide().removeAttr("href");
+            if ($(window).scrollTop() != "0") {
+                $(this).fadeIn("slow")
+            }
+            var scrollDiv = $(this);
+            $(window).scroll(function() {
+                if ($(window).scrollTop() == "0") {
+                    $(scrollDiv).fadeOut("slow")
+                } else {
+                    $(scrollDiv).fadeIn("slow")
+                }
+            });
+            $(this).click(function() {
+                $("html, body").animate({
+                    scrollTop: 0
+                }, "slow")
+            })
+        }
+    });
+    $(function() {
+        $("#w2b-StoTop").scrollToTop();
+    });
+</script>
+<a href='#' id='w2b-StoTop' style='display:none;'>للأ على</a>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  		
+				<script>
+
+//Pop-under window II- By JavaScript Kit
+//Credit notice must stay intact for use
+//Visit http://javascriptkit.com for this script
+// Visit http://www.star28.com/ for more code
+// Translated By http://soft.vip600.com/ & http://www.star28.com/
+
+// ضع هنا روابط المواقع التي ستفتح بشكل عشوائي في كل مرة
+var popunder=new Array()
+popunder[0]="http://maktabati.xoo.it/index.php"  // الموقع الأول 
+popunder[1]="https://www.tsu.co/latrali"  // الموقع الثاني
+popunder[2]="http://www.m5zn.com/register.php?ref=148658"      // الموقع الثالث
+popunder[3]="https://userscloud.com/free189553.html"   // الموقع الرابع
+popunder[4]="http://hulkload.com/free17140.html"   // الموقع الخامس
+popunder[5]="http://islambooks.fulba.com/index.php"   // الموقع السادس
+popunder[6]="http://www.entireweb.com/free_submission/#alidz"   // الموقع السابع
+
+
+//specify popunder window features
+//set 1 to enable a particular feature, 0 to disable // حدد طول و عرض الصفحة المراد ظهورها
+var winfeatures="width=800,height=510,scrollbars=1,resizable=1,toolbar=1,location=1,menubar=1,status=1,directories=0"
+
+//Pop-under only once per browser session? (0=no, 1=yes)
+//Specifying 0 will cause popunder to load every time page is loaded
+var once_per_session=0
+
+///No editing beyond here required/////
+
+function get_cookie(Name) {
+  var search = Name + "="
+  var returnvalue = "";
+  if (document.cookie.length > 0) {
+    offset = document.cookie.indexOf(search)
+    if (offset != -1) { // if cookie exists
+      offset += search.length
+      // set index of beginning of value
+      end = document.cookie.indexOf(";", offset);
+      // set index of end of cookie value
+      if (end == -1)
+         end = document.cookie.length;
+      returnvalue=unescape(document.cookie.substring(offset, end))
+      }
+   }
+  return returnvalue;
+}
+
+function loadornot(){
+if (get_cookie('popunder')==''){
+loadpopunder()
+document.cookie="popunder=yes"
+}
+}
+
+function loadpopunder(){
+win2=window.open(popunder[Math.floor(Math.random()*(popunder.length))],"",winfeatures)
+win2.blur()
+window.focus()
+}
+
+if (once_per_session==0)
+loadpopunder()
+else
+loadornot()
+
+</script>
+
+  
+  
+  
+  
+</body>
+</html>
+  
+  
+    <script>
+    var theToggle = document.getElementById('toggle');
+
+// based on Todd Motto functions
+// http://toddmotto.com/labs/reusable-js/
+
+// hasClass
+function hasClass(elem, className) {
+	return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+}
+// addClass
+function addClass(elem, className) {
+    if (!hasClass(elem, className)) {
+    	elem.className += ' ' + className;
+    }
+}
+// removeClass
+function removeClass(elem, className) {
+	var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
+	if (hasClass(elem, className)) {
+        while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+            newClass = newClass.replace(' ' + className + ' ', ' ');
+        }
+        elem.className = newClass.replace(/^\s+|\s+$/g, '');
+    }
+}
+// toggleClass
+function toggleClass(elem, className) {
+	var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, " " ) + ' ';
+    if (hasClass(elem, className)) {
+        while (newClass.indexOf(" " + className + " ") >= 0 ) {
+            newClass = newClass.replace( " " + className + " " , " " );
+        }
+        elem.className = newClass.replace(/^\s+|\s+$/g, '');
+    } else {
+        elem.className += ' ' + className;
+    }
+}
+
+theToggle.onclick = function() {
+   toggleClass(this, 'on');
+   return false;
+}
+  </script>
+
+  
+  
+
+</body>
+</html>
+ 
